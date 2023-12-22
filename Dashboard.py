@@ -22,11 +22,11 @@ st.title('Air Quality Analysis')
 # Sidebar
 st.sidebar.title('Air Quality Analysis')
 
-st.sidebar.markdown("[Monthly PM2.5 Levels Over Time](#monthly-pm25-levels-over-time)")
-st.sidebar.markdown("[Correlation Between Different Pollutants](#correlation-between-different-pollutants)")
+st.sidebar.markdown("[Tingkat PM2.5 Bulanan](#monthly-pm25-levels-over-time)")
+st.sidebar.markdown("[Korelasi Antar Polutan](#correlation-between-different-pollutants)")
 
 # Main Section 1
-st.header('1. Bagaimana distribusi tingkat PM2.5 pada bulan dan tahun berbeda dalam kumpulan data?', anchor='monthly-pm25-levels-over-time')
+st.header('1. Bagaimana distribusi tingkat PM2.5 pada bulan dan tahun berbeda?', anchor='monthly-pm25-levels-over-time')
 monthly_pm25 = df.groupby('month_year')['PM2.5'].mean().reset_index()
 
 fig, ax = plt.subplots()
@@ -37,7 +37,7 @@ labels = ax.get_xticklabels()
 selected_labels = [label if i % 6 == 0 else '' for i, label in enumerate(labels)]
 ax.set_xticklabels(selected_labels, rotation=45)
 
-plt.title('Monthly PM2.5 Levels Over Time')
+plt.title('Tingkat PM2.5 per Bulan')
 plt.tight_layout()
 
 st.pyplot(fig)
