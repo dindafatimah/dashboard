@@ -1,7 +1,12 @@
-# Welcome to streamlit
+# Air Quality Analysis
 
-This is the app you get when you run `streamlit hello`, extracted as its own app.
+Proyek ini menganalisis data kualitas udara dan memvisualisasikan hasilnya di dasbor Streamlit.
 
-Edit [Hello.py](./Hello.py) to customize this app to your heart's desire. ❤️
+## Instalasi
 
-Check it out on [Streamlit Community Cloud](https://st-hello-app.streamlit.app/)
+1. Clone repository ini.
+2. Install paket yang diperlukan menggunakan pip:
+
+```bash
+pip install -r requirements.txt
+
