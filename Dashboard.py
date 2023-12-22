@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load the data
-@st.cache  
+@st.cache_data  
 def load_data():
     df = pd.read_csv('data/PRSA_Data_Gucheng_20130301-20170228.csv')
     df['wd'] = df['wd'].ffill()
